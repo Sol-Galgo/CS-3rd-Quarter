@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="flames()">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+
+        <script>
+
+            function flames(n1, n2){
+                var n1 = prompt("Input name 1: ");
+                var n2 = prompt("Input Name 2: ");
+                var names = n1+n2;
+                var char = names.split(/[a-zA-Z]/);
+                var charnum = char.length - 1;
+
+                var charesult;
+
+                if(charnum%6==0){
+                    document.getElementById("name").innerHTML = n1+" and "+n2;
+                    charesult = "Friends";
+                    document.getElementById("result").innerHTML = charesult;
+                }
+            
+                else if(charnum%6==1){
+                    document.getElementById("name").innerHTML = n1+" and "+n2;
+                    charesult = "Lovers";
+                    document.getElementById("result").innerHTML = charesult;
+                }
+
+                else if(charnum%6==2){
+                    document.getElementById("name").innerHTML = n1+" and "+n2;
+                    charesult = "Acquaintances";
+                    document.getElementById("result").innerHTML = charesult;
+                }
+            
+                else if(charnum%6==3){
+                    document.getElementById("name").innerHTML = n1+" and "+n2;
+                    charesult = "Marriage";
+                    document.getElementById("result").innerHTML = charesult;
+                }
+
+                else if(charnum%6==4){
+                    document.getElementById("name").innerHTML = n1+" and "+n2;
+                    charesult = "Enemies";
+                    document.getElementById("result").innerHTML = charesult;
+                }
+
+                else {
+                    document.getElementById("name").innerHTML = n1+" and "+n2;
+                    charesult = "Sweethearts";
+                    document.getElementById("result").innerHTML = charesult;
+                }
+
+        }
+
+
+        </script>
+    </body>
+</html>

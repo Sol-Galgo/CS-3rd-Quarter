@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coding Challenge 6</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: lightseagreen;
+        }
+    </style>
+
+    <body>
+        <h1>Quadratic Formula (Format of Quadratic equation: ax^2 + bx + c = 0)</h1>
+        <button onclick="quadratic()">Find the roots</button>
+        <h4 id="result"></h4>
+
+        <script>
+
+
+            function quadratic(a, b, c){
+            var a = parseInt(prompt("Enter value of a: "));
+            var b = parseInt(prompt("Enter value of b: "));
+            var c = parseInt(prompt("Enter value of c: "));
+            var discriminant;
+
+                var d = (b*b) - 4*a*c; 
+                var discriminant = Math.sqrt(d);
+                var x1 = ((-b-discriminant)/2*a).toFixed(2);
+                var x2 = ((-b+discriminant)/2*a).toFixed(2)
+
+                if(d==0){
+                document.getElementById("result").innerHTML = "The root of the quadratic equation is "+x1;
+                }
+
+                else if(d>0){
+                document.getElementById("result").innerHTML = "The roots of the quadratic equation are "+x1+" and "+x2;
+                }
+                
+                else{
+               document.getElementById("result").innerHTML = "The roots of the quadratic equation are imaginary";
+                }
+
+            }
+
+
+        </script>
+
+
+
+    </body>
+</html>
